@@ -1,2 +1,2 @@
 ﻿Problem1001 problem1001 = new Problem1001();
-problem1001.Main();
+problem1001.AMinusB();

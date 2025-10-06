@@ -2,13 +2,11 @@ using System;
 
 public class Problem1001
 {
-    public void Main()
+    public void AMinusB()
     {
-        string input = Console.ReadLine();
-        int A = int.Parse(input);
-
-        input = Console.ReadLine();
-        int B = int.Parse(input);
+        string[] inputs = Console.ReadLine()!.Split();
+        int A = int.Parse(inputs[0]);
+        int B = int.Parse(inputs[1]);
 
         Console.WriteLine(A - B);
     }
