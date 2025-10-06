@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Problem1001 problem1001 = new Problem1001();
+problem1001.Main();
