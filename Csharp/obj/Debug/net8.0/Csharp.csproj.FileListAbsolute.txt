@@ -1,0 +1,15 @@
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/bin/Debug/net8.0/Csharp
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/bin/Debug/net8.0/Csharp.deps.json
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/bin/Debug/net8.0/Csharp.runtimeconfig.json
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/bin/Debug/net8.0/Csharp.dll
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/bin/Debug/net8.0/Csharp.pdb
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/Csharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/Csharp.AssemblyInfoInputs.cache
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/Csharp.AssemblyInfo.cs
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/Csharp.csproj.CoreCompileInputs.cache
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/Csharp.sourcelink.json
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/Csharp.dll
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/refint/Csharp.dll
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/Csharp.pdb
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/Csharp.genruntimeconfig.cache
+/home/junho/Repositories/chillbok-baekjoon-solving/Csharp/obj/Debug/net8.0/ref/Csharp.dll
