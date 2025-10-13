@@ -2,7 +2,7 @@ using System;
 
 namespace Csharp.Problems
 {
-    public class P1001
+    public class Problem1001
     {
         public void Solve()
         {
