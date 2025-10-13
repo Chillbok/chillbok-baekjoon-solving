@@ -21,6 +21,7 @@ try
         Console.WriteLine($"Error: 문제 {problemNumber}번 존재하지 않음.");
         return;
     }
+    //Console.WriteLine($"problemType: {problemType}");
 
     //문제 클래스의 인스턴스를 생성
     object? problemInstance = Activator.CreateInstance(problemType);
@@ -29,6 +30,7 @@ try
         Console.WriteLine($"Error: {typeName}이라는 인스턴스 생성 불가능");
         return;
     }
+    //Console.WriteLine($"problemInstance: {problemInstance}");
 
     //'Solve' 메서드 찾기
     MethodInfo? solveMethod = problemType.GetMethod("Solve");
@@ -37,6 +39,7 @@ try
         Console.WriteLine($"Error: 'Solve' 메서드 클래스 '{typeName}'에서 찾을 수 없음");
         return;
     }
+    //Console.WriteLine($"solveMethod: {solveMethod}");
 
     //'Solve' 메서드 호출
     solveMethod.Invoke(problemInstance, null);
