@@ -20,10 +20,13 @@ namespace Csharp.Problems
 
                 int distanceR1R2 = a[2] + a[5];
                 double distanceAB = GetLength(a[0], a[1], a[3], a[4]);
+                int[] posA = [a[0], a[1]];
+                int[] posB = [a[3], a[4]];
+                int[] disR = [a[2], a[5]];
 
-                int testCaseResult = DefineTestCase(distanceR1R2, distanceAB);
+                int testCaseResult = DefineTestCase(posA, posB, disR);
                 answer.Add(testCaseResult);
-                Console.WriteLine($"두 좌표 거리: {distanceAB}, r_1 + r2 = {distanceR1R2}");
+                Console.WriteLine($"두 좌표 거리: {GetLength(posA[0], posA[1], posB[0], posB[1])}, r_1 + r2 = {disR[0] + disR[1]}");
             }
 
             for (int i = 0; i < answer.Count; i++)
@@ -32,14 +35,21 @@ namespace Csharp.Problems
             }
         }
 
-        private int DefineTestCase(int r1R2Length, double lengthAB)
+        private int DefineTestCase(int[] positionA, int[] positionB, int[] distanceR)
         {
-            int ABNormalize = ReturnNormalNumber(lengthAB);
-            int r1r2Normalize = ReturnNormalNumber(r1R2Length);
+            int distAB = ReturnNormalNumber(GetLength(positionA[0], positionA[1], positionB[0], positionB[1]));
 
-            if (ABNormalize < r1r2Normalize) { return 2; }
-            else if (ABNormalize == r1r2Normalize) { return 1; }
-            else { return -1; }
+            if ((distAB == 0) && (distanceR[0] != distanceR[1])) { return 0; }
+
+            int lenR1R2 = ReturnNormalNumber(distanceR[0] + distanceR[1]);
+            if (distAB < lenR1R2) { return 2; }
+            else if (distAB == lenR1R2) { return 1; }
+            else if (distAB > lenR1R2) { return -1; }
+            else
+            {
+                Console.WriteLine("error. 없는 경우의 수");
+                return -100;
+            }
         }
 
         //숫자에 1000 곱한 뒤, int로 변환해서 반환
