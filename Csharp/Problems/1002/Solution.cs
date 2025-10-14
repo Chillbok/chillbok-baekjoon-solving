@@ -48,7 +48,7 @@ namespace Csharp.Problems
             if ((distAB == 0) && (r1 != r2)) { return 0; }
             else if ((distAB == 0) && (r1 == r2)) { return 1; }
 
-            double sumR1R2 = r1 + r2;
+            double sumR1R2 = Math.Pow(r1 + r2, 2);
 
             if (distAB < sumR1R2) { return 2; }
             else if (distAB == sumR1R2) { return 1; }
@@ -57,7 +57,7 @@ namespace Csharp.Problems
 
         private double ReturnDistance(int x1, int y1, int x2, int y2)
         {
-            double result = Math.Pow(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2), 0.5);
+            double result = Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2);
             result = Math.Round(result, 3);
             return result;
         }
