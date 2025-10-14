@@ -1,25 +1,38 @@
 using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 
 namespace Csharp.Problems
 {
     public class Problem1002
     {
-        int testCaseAmount; //테스트 횟수
         public void Solve()
         {
             string[] firstInput = Console.ReadLine()!.Split();
             //테스트 횟수
-            testCaseAmount = int.Parse(firstInput[0]);
+            int testCaseAmount = int.Parse(firstInput[0]);
 
             List<int> answer = new List<int>();
 
+            string[] numberInputs;
+
             for (int i = 0; i < testCaseAmount; i++)
             {
-                string[] numberInputs = Console.ReadLine()!.Split();
+                numberInputs = Console.ReadLine()!.Split();
 
-                answer.Add(Test(numberInputs));
+                int x1, y1, r1, x2, y2, r2;
+
+                x1 = int.Parse(numberInputs[0]);
+                y1 = int.Parse(numberInputs[1]);
+                r1 = int.Parse(numberInputs[2]);
+                x2 = int.Parse(numberInputs[3]);
+                y2 = int.Parse(numberInputs[4]);
+                r2 = int.Parse(numberInputs[5]);
+
+                answer.Add(Test(x1, y1, r1, x2, y2, r2));
             }
+
 
             for (int i = 0; i < answer.Count; i++)
             {
@@ -28,15 +41,8 @@ namespace Csharp.Problems
         }
 
         //테스트 실행
-        private int Test(string[] stringInput)
+        private int Test(int x1, int y1, int r1, int x2, int y2, int r2)
         {
-            int x1, y1, r1, x2, y2, r2;
-            List<int> inputs = ReturnIntList(stringInput);
-            x1 = inputs[0]; y1 = inputs[1];
-            r1 = inputs[2];
-            x2 = inputs[3]; y2 = inputs[4];
-            r2 = inputs[5];
-
             double distAB = ReturnDistance(x1, y1, x2, y2);
 
             if ((distAB == 0) && (r1 != r2)) { return 0; }
@@ -53,17 +59,6 @@ namespace Csharp.Problems
         {
             double result = Math.Pow(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2), 0.5);
             result = Math.Round(result, 3);
-            return result;
-        }
-
-        //받은 string 배열을 int 리스트로 반환
-        private List<int> ReturnIntList(string[] inputs)
-        {
-            List<int> result = new List<int>();
-            for (int i = 0; i < inputs.Length; i++)
-            {
-                result.Add(int.Parse(inputs[i]));
-            }
             return result;
         }
     }
