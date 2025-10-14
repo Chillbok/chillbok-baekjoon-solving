@@ -45,14 +45,13 @@ namespace Csharp.Problems
         {
             double distAB = ReturnDistance(x1, y1, x2, y2);
 
-            if ((distAB == 0) && (r1 != r2)) { return 0; }
-            else if ((distAB == 0) && (r1 == r2)) { return 1; }
+            if ((distAB == 0) && (r1 == r2)) { return -1; }
 
             double sumR1R2 = Math.Pow(r1 + r2, 2);
 
             if (distAB < sumR1R2) { return 2; }
             else if (distAB == sumR1R2) { return 1; }
-            else { return -1; }
+            else { return 0; }
         }
 
         private static double ReturnDistance(int x1, int y1, int x2, int y2)
