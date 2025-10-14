@@ -43,22 +43,22 @@ namespace Csharp.Problems
         //테스트 실행
         private static int Test(int x1, int y1, int r1, int x2, int y2, int r2)
         {
-            double distAB = ReturnDistance(x1, y1, x2, y2);
+            long distAB = ReturnDistance(x1, y1, x2, y2);
 
             if ((distAB == 0) && (r1 == r2)) { return -1; }
 
-            double sumR1R2 = Math.Pow(r1 + r2, 2);
+            long sumR1R2 = (long)Math.Pow(r1 + r2, 2);
 
             if (distAB < sumR1R2) { return 2; }
             else if (distAB == sumR1R2) { return 1; }
             else { return 0; }
         }
 
-        private static double ReturnDistance(int x1, int y1, int x2, int y2)
+        private static long ReturnDistance(int x1, int y1, int x2, int y2)
         {
             double result = Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2);
             result = Math.Round(result, 3);
-            return result;
+            return (long)result;
         }
     }
 }
