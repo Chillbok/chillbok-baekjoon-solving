@@ -41,7 +41,7 @@ namespace Csharp.Problems
         }
 
         //테스트 실행
-        private int Test(int x1, int y1, int r1, int x2, int y2, int r2)
+        private static int Test(int x1, int y1, int r1, int x2, int y2, int r2)
         {
             double distAB = ReturnDistance(x1, y1, x2, y2);
 
