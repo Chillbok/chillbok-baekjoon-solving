@@ -55,7 +55,7 @@ namespace Csharp.Problems
             else { return -1; }
         }
 
-        private double ReturnDistance(int x1, int y1, int x2, int y2)
+        private static double ReturnDistance(int x1, int y1, int x2, int y2)
         {
             double result = Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2);
             result = Math.Round(result, 3);
