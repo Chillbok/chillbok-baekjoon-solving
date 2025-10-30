@@ -9,7 +9,8 @@ namespace Csharp.Problems
     {
         public void Solve()
         {
-            string[] firstInput = Console.ReadLine()!.Split();
+            //입력 받고, 리스트로 만들기
+            string[] firstInput = GetInput();
             //테스트 횟수
             int testCaseAmount = int.Parse(firstInput[0]);
 
@@ -38,6 +39,18 @@ namespace Csharp.Problems
             {
                 Console.WriteLine(answer[i]);
             }
+        }
+        
+        private static int[] GetInput()
+        {
+            string [] firstInput = Console.ReadLine()!.Split();
+            int firstInputLength = firstInput.Length;
+            int[] result = new int[firstInputLength];
+            for (int i = 0; i < firstInputLength; i++)
+            {
+                int[i] = int.Parse(firstInput[i]);
+            }
+            return result;
         }
 
         //테스트 실행
