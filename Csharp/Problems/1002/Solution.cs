@@ -12,27 +12,14 @@ namespace Csharp.Problems
             //테스트 횟수 정하기
             int testCaseAmount = firstInput[0]; //테스트 횟수
 
-            int[] testcases = GetInput(); //테스트 값들 (x1, y1, r1, x2, y2, r2)
+            int[] testCases = GetInput(); //테스트 값들 (x1, y1, r1, x2, y2, r2)
 
             List<int> answer = new List<int>(); //답 저장하기 위한 리스트
 
             for (int i = 0; i < testCaseAmount; i++)
             {
-                //!!!여기서부터 수정 필요
-                numberInputs = Console.ReadLine()!.Split();
-
-                int x1, y1, r1, x2, y2, r2;
-
-                x1 = int.Parse(numberInputs[0]);
-                y1 = int.Parse(numberInputs[1]);
-                r1 = int.Parse(numberInputs[2]);
-                x2 = int.Parse(numberInputs[3]);
-                y2 = int.Parse(numberInputs[4]);
-                r2 = int.Parse(numberInputs[5]);
-
-                answer.Add(Test(x1, y1, r1, x2, y2, r2));
+                answer.Add(Test(testCases));
             }
-
 
             for (int i = 0; i < answer.Count; i++)
             {
@@ -53,8 +40,11 @@ namespace Csharp.Problems
         }
 
         //테스트 실행
-        private static int Test(int x1, int y1, int r1, int x2, int y2, int r2)
+        private static int Test(int[] arr)
+        //private static int Test(int x1, int y1, int r1, int x2, int y2, int r2)
         {
+            //긴급 종료
+            if (arr.Length != 6) {return -100;}
             //두 원의 중심 사이 거리
             long distAB = ReturnDistance(x1, y1, x2, y2);
 
