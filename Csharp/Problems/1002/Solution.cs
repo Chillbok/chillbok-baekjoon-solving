@@ -9,17 +9,16 @@ namespace Csharp.Problems
     {
         public void Solve()
         {
-            //입력 받고, 리스트로 만들기
-            string[] firstInput = GetInput();
-            //테스트 횟수
-            int testCaseAmount = int.Parse(firstInput[0]);
+            //테스트 횟수 정하기
+            int testCaseAmount = firstInput[0]; //테스트 횟수
 
-            List<int> answer = new List<int>();
+            int[] testcases = GetInput(); //테스트 값들 (x1, y1, r1, x2, y2, r2)
 
-            string[] numberInputs;
+            List<int> answer = new List<int>(); //답 저장하기 위한 리스트
 
             for (int i = 0; i < testCaseAmount; i++)
             {
+                //!!!여기서부터 수정 필요
                 numberInputs = Console.ReadLine()!.Split();
 
                 int x1, y1, r1, x2, y2, r2;
