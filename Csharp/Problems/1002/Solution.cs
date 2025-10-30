@@ -42,18 +42,6 @@ namespace Csharp.Problems
             return result;
         }
         
-        private static int[] GetInput()
-        {
-            string [] firstInput = Console.ReadLine()!.Split();
-            int firstInputLength = firstInput.Length;
-            int[] result = new int[firstInputLength];
-            for (int i = 0; i < firstInputLength; i++)
-            {
-                int[i] = int.Parse(firstInput[i]);
-            }
-            return result;
-        }
-
         //테스트 실행
         private static int Test(int[] arr)
         //private static int Test(int x1, int y1, int r1, int x2, int y2, int r2)
